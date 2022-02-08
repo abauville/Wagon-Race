@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+  font-family: 'Press Start 2P', Arial;
+}
+
+h1 {
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+
+.racer-table {
+  margin: 0 auto;
+  margin-top: 32px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.racer-table td {
+  height: 60px;
+  width: 60px;
+  /* border: 1px solid rgba(0,0,0,.1); */
+  background-image: radial-gradient(#A6A6CC 0%,#FFF 140%);
+}
+#player1-race {
+  border-bottom: 5px dashed yellow;
+}
+.racer-table td.active {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0;
+}
+#player1-race td.active {
+  background-image: url("images/player_1.png");
+}
+#player2-race td.active {
+  background-image: url("images/player_2.png");
+}
+
+.prompt-container {
+  text-align: center;
+}
+
+
+.fires {
+  background-color: #555;
+  width: 140px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 16px auto;
+  border-radius: 32px;
+
+}
+
+.fire {
+  /* color: red; */
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: darkred;
+  /* background-image: radial-gradient(rgb(182, 0, 0) 0%,rgb(132, 0, 0) 100%); */
+  border-top: 6px solid black;
+  border-bottom: 3px solid gray;
+}
+
+.restart#fire1 {
+  animation: animate 1 0.5s 0s forwards;
+}
+.restart#fire2 {
+  animation: animate 1 0.5s 1s forwards;
+}
+.restart#fire3 {
+  animation: animate 1 0.5s 2s forwards;
+}
+
+.go#fire1 {
+  animation: animate-go 1 0.2s 0s forwards;
+  background-color: red;
+  box-shadow: 0 4px 10px 10px red;
+}
+.go#fire2 {
+  animation: animate-go 1 0.2s 0s forwards;
+  background-color: red;
+  box-shadow: 0 4px 6px 6px red;
+}
+.go#fire3 {
+  animation: animate-go 1 0.2s 0s forwards;
+  background-color: red;
+  box-shadow: 0 4px 6px 6px red;
+}
+@keyframes animate {
+  from {
+    background-color: darkred;
+  }
+  to {
+    background-color: rgb(230, 20, 20);
+
+    box-shadow: 0px 4px 6px 6px rgba(255, 0, 0, 0.5);
+    /* background-color: green; */
+  }
+}
+@keyframes animate-go {
+  from {
+    background-color: rgb(230, 200, 20);
+    box-shadow: 0 4px 6px 6px rgba(255, 0, 0, 0.5);
+  }
+  to {
+    background-color: rgba(20,230,20);
+    box-shadow: 0 4px 6px 6px rgb(0, 255, 0, 0.5);
+    /* background-color: green; */
+  }
+}
+
+button {
+  border-radius: 5px;
+  padding: 5px 20px;
+  background-color: rgb(78, 178, 255);
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+button:hover {
+  background-color: rgb(25, 169, 143);
+}
